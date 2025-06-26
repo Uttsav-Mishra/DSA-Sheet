@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays_1;
 
 public class KandanesAlgorithm {
 
