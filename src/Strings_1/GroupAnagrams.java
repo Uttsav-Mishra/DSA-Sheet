@@ -88,27 +88,4 @@ public class GroupAnagrams {
         });
 
     }
-
-
-    public int[] topKFrequent(int[] nums, int k) {
-        HashMap<Integer,Integer> freq = new HashMap<>();
-        for(int i=0;i<nums.length;i++)
-        {
-            if(freq.containsKey(nums[i]))
-                freq.put(nums[i],freq.get(nums[i])+1);
-            else
-                freq.put(nums[i],1);
-        }
-        String s = "A man, a plan, a canal: Panama";
-        String palindrome = "";
-        for (char c : s.toCharArray()) {
-            if (!Character.isLetterOrDigit(c)) {
-                palindrome+=c ;// Found a non-alphanumeric character
-            }
-        }
-        palindrome = palindrome.toLowerCase();
-        return checkPalindrome(palindrome);
-
-
-    }
 }
