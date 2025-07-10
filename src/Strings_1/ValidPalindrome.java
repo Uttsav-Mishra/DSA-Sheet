@@ -1,5 +1,9 @@
 package Strings_1;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 public class ValidPalindrome {
 
     /***
@@ -69,7 +73,20 @@ public class ValidPalindrome {
 
     public static void main(String args[])
     {
+        int nums[] ={1,2,3,1,3,1};
+        int k=2;
         String checkPalindromeStatement = "A man, a plan, a canal: Panama";
         System.out.println(isPalindrome(checkPalindromeStatement));
+        HashMap<Integer,Integer> freq = new HashMap<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            if(freq.containsKey(nums[i]))
+                freq.put(nums[i],freq.get(nums[i])+1);
+            else
+                freq.put(nums[i],1);
+        }
+
+        for(Map.Entry<Integer,Integer>sortFreq : freq.entrySet().stream().sorted((a, b)->a.getValue()-b.getValue()).collect(Collectors.toCollection());
+
     }
 }
