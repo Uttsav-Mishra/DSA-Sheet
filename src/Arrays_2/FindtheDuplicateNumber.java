@@ -72,7 +72,7 @@ public class FindtheDuplicateNumber {
         int nums[] = {3,1,3,4,2};
         System.out.println(findDuplicate(nums));
         System.out.println(findDuplicate(nums));
-        SystemColor.pink();
+
     }
 
 
